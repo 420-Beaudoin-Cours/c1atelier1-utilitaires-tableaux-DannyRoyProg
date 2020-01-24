@@ -92,6 +92,15 @@ public class Tableaux {
         int i = 0;
         boolean trouve = false;
 
-        return -1;
+        while (i < tab.length && !trouve){
+            if (tab[i] == fouille)
+                trouve = true;
+            else
+                i++;
+        }
+        if (trouve)
+            return i;
+        else
+            return -1;
     }
 }
